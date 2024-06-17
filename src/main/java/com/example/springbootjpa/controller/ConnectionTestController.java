@@ -34,10 +34,10 @@ public class ConnectionTestController {
             int finalI = i + 1;
             CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
                 log.info("Start connection.........");
-//                        jdbcTemplate.queryForObject("SELECT " + finalI + " FROM dual", Integer.class);
+                        jdbcTemplate.queryForObject("SELECT " + finalI + " FROM dual", Integer.class);
 //                        jdbcTemplate.queryForObject("SELECT pg_sleep(10)", Integer.class);
 //                        bookService.findAll();
-                        bookService.selectSleep(10);
+//                        bookService.selectSleep(10);
                         log.info("Message: {}", finalI);
                     }
             );
